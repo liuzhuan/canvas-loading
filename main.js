@@ -5,6 +5,7 @@
  * @param {number} width - canvas 宽度
  * @param {number} height - canvas 高度
  * @param {string} color - 颜色
+ * @param {number} startAngle - 开始角度
  */
 function Loader(options = {}) {
   this.ratio = 0;
@@ -15,10 +16,11 @@ function Loader(options = {}) {
   this.cy = this.height / 2;
   this.radius = this.cx - 1;
   this.color = options.color || 'white';
-  this.startAngle = - Math.PI / 2;
+  this.startAngle = options.startAngle || (- Math.PI / 2);
 }
 
-Loader.prototype.set = function(val) {
+// update loader progression
+Loader.prototype.update = function(val) {
   this.ratio = val;
   if (!this.context) {
     this.context = this.createContext()
@@ -47,9 +49,10 @@ Loader.prototype.drawSlice = function(ratio) {
 
   ctx.clearRect(0, 0, w, h)
   
+  // draw the outer circle line
   ctx.beginPath()
   ctx.strokeStyle = color
-  ctx.arc(cx, cy, radius, startAngle, Math.PI * 2 + startAngle, true)
+  ctx.arc(cx, cy, radius, 0, Math.PI * 2, true)
   ctx.stroke()
   ctx.closePath()
   
