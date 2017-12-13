@@ -29,6 +29,7 @@ Loader.prototype.update = function(val) {
   this.drawSlice(val)
 }
 
+// 创建绘图的上下文
 Loader.prototype.createContext = function() {
   const canvasContainer = document.querySelector(this.container)
   canvasContainer.innerHTML = `<canvas width="${this.width}" height="${this.height}" class="js-canvas"></canvas>`
