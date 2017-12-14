@@ -2,9 +2,10 @@
   "name": "canvas-loading",
   "version": "1.0.0",
   "description": "一个简单的Canvas加载进度",
-  "main": "main.js",
+  "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup main.js --o bundle.js -f umd --name 'canvasLoading'"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/liuzhuan/canvas-loading/issues"
   },
-  "homepage": "https://github.com/liuzhuan/canvas-loading#readme"
+  "homepage": "https://github.com/liuzhuan/canvas-loading#readme",
+  "devDependencies": {
+    "rollup": "^0.52.1"
+  }
 }
