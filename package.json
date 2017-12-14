@@ -1,5 +1,5 @@
 {
-  "name": "canvas-loading",
+  "name": "liuz-canvas-loading",
   "version": "1.0.0",
   "description": "一个简单的Canvas加载进度",
   "main": "bundle.js",
