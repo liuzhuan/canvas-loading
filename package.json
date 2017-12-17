@@ -1,6 +1,6 @@
 {
   "name": "liuz-canvas-loading",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一个简单的 Canvas 加载进度",
   "main": "dist/bundle.js",
   "module": "dist/bundle.es.js",
